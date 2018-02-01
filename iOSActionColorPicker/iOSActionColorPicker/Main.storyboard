@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dialog-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Color Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4E-RS-wxU">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IFK-Mi-Rt8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is an example of selecting a color using the built-in Action Color Picker Dialog Box." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9By-Zp-HMo">
+                                <rect key="frame" x="16" y="57" width="343" height="123"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="O7T-6H-JYe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-4d-wZa" customClass="ACColorWell">
+                                <rect key="frame" x="16" y="198" width="123" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="51G-fP-9TB"/>
+                                    <constraint firstAttribute="height" constant="45" id="yHh-UM-knN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-TX-JaQ">
+                                <rect key="frame" x="154" y="205" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WiW-UB-y2z"/>
+                                    <constraint firstAttribute="width" constant="114" id="xgR-bL-XzL"/>
+                                </constraints>
+                                <state key="normal" title="Select Color"/>
+                                <connections>
+                                    <action selector="SelectColor:" destination="9pv-A4-QxB" eventType="touchUpInside" id="uiq-e9-gbS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kAF-TX-JaQ" firstAttribute="top" secondItem="9By-Zp-HMo" secondAttribute="bottom" constant="25" id="7d1-MF-hou"/>
+                            <constraint firstItem="kAF-TX-JaQ" firstAttribute="leading" secondItem="VsD-4d-wZa" secondAttribute="trailing" constant="15" id="K3I-Tw-7jp"/>
+                            <constraint firstItem="VsD-4d-wZa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="OmE-Ie-ref"/>
+                            <constraint firstItem="VsD-4d-wZa" firstAttribute="top" secondItem="9By-Zp-HMo" secondAttribute="bottom" constant="18" id="RTF-U2-xP2"/>
+                            <constraint firstItem="9By-Zp-HMo" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="dEf-Km-nC2"/>
+                            <constraint firstItem="9By-Zp-HMo" firstAttribute="top" secondItem="i4E-RS-wxU" secondAttribute="bottom" constant="8" id="gWI-CR-tju"/>
+                            <constraint firstItem="i4E-RS-wxU" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="jwB-9c-fFr"/>
+                            <constraint firstItem="i4E-RS-wxU" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="mTT-kp-K4o"/>
+                            <constraint firstItem="9By-Zp-HMo" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="mfV-xW-6x8"/>
+                            <constraint firstItem="i4E-RS-wxU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="njn-0A-qce"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dialog" image="First" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="colorWell" destination="VsD-4d-wZa" id="gea-Eg-wqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Color Components-->
+        <scene sceneID="fJX-3e-WMc">
+            <objects>
+                <viewController id="JFF-Fd-uOy" customClass="ThridViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MT4-P8-28r"/>
+                        <viewControllerLayoutGuide type="bottom" id="L8V-ZZ-emi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWZ-Hb-cyD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Color Components" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5G-vM-A4S">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="74L-lr-Ycc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-bo-FDy">
+                                <rect key="frame" x="16" y="49" width="343" height="123"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="CS7-Os-41M"/>
+                                </constraints>
+                                <string key="text">This is an example of using the Action Color Cube and Action Color Hue Bar directly in your app's user interface to present a custom color selection UI.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-Z5-s9I" customClass="ACColorCube">
+                                <rect key="frame" x="59" y="180" width="256" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="LDP-4K-lKG"/>
+                                    <constraint firstAttribute="height" constant="256" id="dp4-PB-UR3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-bh-Tsc" customClass="ACHueBar">
+                                <rect key="frame" x="59" y="444" width="256" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1tv-HC-I3f"/>
+                                    <constraint firstAttribute="width" constant="256" id="xLf-3l-e3m"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0V-h9-fhS" customClass="ACColorWell">
+                                <rect key="frame" x="59" y="502" width="256" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="EAu-ip-01R"/>
+                                    <constraint firstAttribute="height" constant="45" id="rGU-a1-OtT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pcS-bh-Tsc" firstAttribute="centerX" secondItem="nWZ-Hb-cyD" secondAttribute="centerX" id="2ej-JG-9Dt"/>
+                            <constraint firstItem="w5G-vM-A4S" firstAttribute="trailing" secondItem="nWZ-Hb-cyD" secondAttribute="trailingMargin" id="3DO-ui-iau"/>
+                            <constraint firstItem="0ay-bo-FDy" firstAttribute="trailing" secondItem="nWZ-Hb-cyD" secondAttribute="trailingMargin" id="7DR-wn-Pkj"/>
+                            <constraint firstItem="0ay-bo-FDy" firstAttribute="top" secondItem="w5G-vM-A4S" secondAttribute="bottom" constant="8" id="BJE-i0-LtR"/>
+                            <constraint firstItem="nWw-Z5-s9I" firstAttribute="centerX" secondItem="nWZ-Hb-cyD" secondAttribute="centerX" id="GNt-05-luT"/>
+                            <constraint firstItem="w5G-vM-A4S" firstAttribute="leading" secondItem="nWZ-Hb-cyD" secondAttribute="leadingMargin" id="HVo-A9-d86"/>
+                            <constraint firstItem="f0V-h9-fhS" firstAttribute="centerX" secondItem="nWZ-Hb-cyD" secondAttribute="centerX" id="IIS-t4-htw"/>
+                            <constraint firstItem="w5G-vM-A4S" firstAttribute="top" secondItem="MT4-P8-28r" secondAttribute="bottom" id="O5S-0q-IdP"/>
+                            <constraint firstItem="nWw-Z5-s9I" firstAttribute="top" secondItem="0ay-bo-FDy" secondAttribute="bottom" constant="8" id="PbO-0H-UCr"/>
+                            <constraint firstItem="0ay-bo-FDy" firstAttribute="leading" secondItem="nWZ-Hb-cyD" secondAttribute="leadingMargin" id="W7z-Ag-OG9"/>
+                            <constraint firstItem="pcS-bh-Tsc" firstAttribute="top" secondItem="nWw-Z5-s9I" secondAttribute="bottom" constant="8" id="WWS-Ou-PvU"/>
+                            <constraint firstItem="f0V-h9-fhS" firstAttribute="top" secondItem="pcS-bh-Tsc" secondAttribute="bottom" constant="8" id="ftR-HQ-cVW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Color Components" image="Third" id="PJ0-XV-Xeo"/>
+                    <connections>
+                        <outlet property="colorCube" destination="nWw-Z5-s9I" id="IZR-PD-smC"/>
+                        <outlet property="colorWell" destination="f0V-h9-fhS" id="BJS-UA-JMJ"/>
+                        <outlet property="hueBar" destination="pcS-bh-Tsc" id="EsK-rx-jdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmZ-Jf-1cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="740.7796101949026"/>
+        </scene>
+        <!--Color Well-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Color Well" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qty-Ur-2oN">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hvy-GP-O7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is an example of selecting a color using the Action Color Picker Dialog Box built into an Action Color Well." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n51-CA-qkz">
+                                <rect key="frame" x="16" y="49" width="343" height="123"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="scr-he-Sdg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-Pn-7Lq" customClass="ACColorWell">
+                                <rect key="frame" x="16" y="190" width="343" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XR1-ew-KYX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n51-CA-qkz" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="1ll-cI-SXz"/>
+                            <constraint firstItem="n51-CA-qkz" firstAttribute="top" secondItem="Qty-Ur-2oN" secondAttribute="bottom" constant="8" id="2fV-VD-Uhj"/>
+                            <constraint firstItem="Qty-Ur-2oN" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="Eig-78-5O3"/>
+                            <constraint firstItem="Qty-Ur-2oN" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="PG2-Ae-pWu"/>
+                            <constraint firstItem="Pd8-Pn-7Lq" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="VVe-Pm-FHk"/>
+                            <constraint firstItem="Qty-Ur-2oN" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="aki-vx-Ufc"/>
+                            <constraint firstItem="Pd8-Pn-7Lq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="pA6-wm-bne"/>
+                            <constraint firstItem="Pd8-Pn-7Lq" firstAttribute="top" secondItem="n51-CA-qkz" secondAttribute="bottom" constant="18" id="qK6-16-IrC"/>
+                            <constraint firstItem="n51-CA-qkz" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="tMc-jc-CQw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Color Well" image="Second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="colorWell" destination="Pd8-Pn-7Lq" id="f8i-L3-lKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="JFF-Fd-uOy" kind="relationship" relationship="viewControllers" id="AoD-27-Rxo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="First" width="24" height="22"/>
+        <image name="Second" width="24" height="24"/>
+        <image name="Third" width="20" height="24"/>
+    </resources>
+</document>
