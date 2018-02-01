@@ -18,7 +18,7 @@ If the `ActionComponents` entry is grayed-out with a red X (as shown in the imag
 
 Click the **Browse** button, navigate to where you installed the **Action Components** trial or licensed version and locate the appropriate `ActionComponents.ddl` (for either iOS or Android) and click the **OK** button. The sample will now be ready to run.
 
-# Alert and Notification Types
+# The Action Color Picker Suite
 
 The **Action Color Picker** is actually a suite of several individual components that can be added to your iOS or Android apps to provide a wide range of color selection interfaces. Because of this flexibility, you can use the individual components of the suite to tailor the color selection UI to your app's look and feel.
 
